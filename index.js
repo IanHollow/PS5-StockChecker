@@ -11,7 +11,6 @@ var T = new twit({
     access_token: '***REMOVED***',
     access_token_secret: '***REMOVED***'
 });
-'>Sold Out<'
 
 var Website = {
     Amazon: {
@@ -127,7 +126,7 @@ async function scrape(Website, page) {
     } else if (Website.stock == false) {
         Website.notify == true;
     }
-    console.log(Website.title, Website.stock ? "In Stock" : "Out of Stock");
+    //console.log(Website.title, Website.stock ? "In Stock" : "Out of Stock");
 }
 
 async function scrapePS5Stock() {
@@ -140,10 +139,11 @@ async function scrapePS5Stock() {
             '--ignore-certificate-errors',
             '--ignore-certificate-errors-spki-list',
         ],
-        headless: true,
+        headless: false,
         ignoreHTTPSErrors: true
     });
     const page = await browser.newPage();
+    browser.userAgent
 
     // Content/Tracker Blocking
     await page.setRequestInterception(true);
@@ -172,6 +172,6 @@ async function scrapePS5Stock() {
     await browser.close();
 }
 
-//setInterval(scrapePS5Stock(), 1000 * 60 * Math.random() * 3);
+setInterval(scrapePS5Stock, ((1000 * 60) + (Math.random() * 3)));
 
-scrapePS5Stock();
+//scrapePS5Stock();

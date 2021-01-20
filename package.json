@@ -7,9 +7,17 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/IanHollow/ps5-stock-checker.git"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/IanHollow/ps5-stock-checker/issues"
+  },
+  "homepage": "https://github.com/IanHollow/ps5-stock-checker#readme",
   "dependencies": {
     "fs": "^0.0.1-security",
     "puppeteer": "^5.5.0",
