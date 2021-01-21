@@ -172,6 +172,6 @@ async function scrapePS5Stock() {
     await browser.close();
 }
 
-setInterval(scrapePS5Stock, ((1000 * 60) + (Math.random() * 3)));
+setInterval(scrapePS5Stock, ((1000 * 60) + (Math.random() * 3 * 1000 * 60)));
 
 //scrapePS5Stock();
