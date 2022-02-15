@@ -6,10 +6,10 @@ import fs from 'fs';
 puppeteer.use(StealthPlugin());
 
 var T = new twit({
-    consumer_key: '***REMOVED***',
-    consumer_secret: '***REMOVED***',
-    access_token: '***REMOVED***',
-    access_token_secret: '***REMOVED***'
+    consumer_key: process.env.CONSUMER_KEY,
+    consumer_secret: process.env.CONSUMER_SECRET,
+    access_token: process.env.ACCESS_TOKEN,
+    access_token_secret: process.env.ACCESS_TOKEN_SECRET
 });
 
 var Website = {
